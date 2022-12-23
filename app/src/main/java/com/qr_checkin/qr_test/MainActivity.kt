@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
     private val loginLauncher =
         registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             Log.d(TAG, "registerForActivityResult - result : $result")
-
             if (result.resultCode == Activity.RESULT_OK) {
                 Log.d(TAG, "registerForActivityResult - RESULT_OK")
                 authenticateToEncrypt()  //생체 인증 가능 여부확인 다시 호출
